@@ -28,4 +28,4 @@ jobs:
        - name: multiline command
          run: |
            node -v
-           npm -u
+           npm -v
