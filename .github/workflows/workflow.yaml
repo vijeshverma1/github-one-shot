@@ -10,3 +10,22 @@ jobs:
          run: |
            node -v
            npm -v
+   parallel-jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: echo a string
+         run: echo "hello world"
+       - name: multiline command
+         run: |
+           node -v
+           npm -v
+   independent-jobs:
+     needs: [run-shell-commands]
+     runs-on: ubuntu-latest
+     steps:
+       - name: echo a string
+         run: echo "hello world"
+       - name: multiline command
+         run: |
+           node -v
+           npm -v
