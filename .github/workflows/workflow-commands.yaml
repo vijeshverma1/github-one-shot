@@ -1,0 +1,16 @@
+name: workflow commands
+on: [push]
+jobs:
+   testing-workflow-commands:
+      runs-on: ubuntu-latest
+      steps:
+        - name: setting an errore massege
+          run: echo "::error::missing semicoln"
+        - name: setting an errore massege parameters
+          run: echo "::error file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
+        - name: setting an debug massege parameters
+          run: echo "::debug file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
+        - name: setting an warning massege parameters
+          run: echo "::warning file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
+        - name: setting an notice massege parameters
+          run: echo "::notice file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
