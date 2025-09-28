@@ -14,3 +14,12 @@ jobs:
           run: echo "::warning file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
         - name: setting an notice massege parameters
           run: echo "::notice file=app.js,line=10,endline=20,col=15,column=25,endcolumn=30::missing senicolon"
+        - name: grouping logs
+          run: |
+            echo "::group::my group"
+            echo "inside my group"
+            echo "::endgroup::"
+        - name: masking a secret
+          run: |
+            echo "::add-mask::my secret"
+            echo "my secret"
