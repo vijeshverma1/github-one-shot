@@ -1,0 +1,27 @@
+name: working and shell
+on: [push]
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  working-dir-and-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: all the working dir and file env
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+  working-dir-and-shell-windows:
+    runs-on: window-latest
+    steps:
+      - name: all the working dir and file env
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
