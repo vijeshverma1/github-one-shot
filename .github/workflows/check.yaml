@@ -1,0 +1,11 @@
+name: checkout-action
+on: [push]
+jobs:
+  checkout-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: BEFORE checkout-and-display-files
+        run: |
+          ls -a
+      - name: AFTER checkout-and-display-files
+        uses: actions/checkout@v3
