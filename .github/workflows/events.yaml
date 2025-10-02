@@ -1,0 +1,12 @@
+name: reposetry events
+on: [push, pull_request, issues]
+jobs:
+  reposertry-events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-and-display-files
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
+      - name: checkout-action
+        uses: actions/checkout@v3
