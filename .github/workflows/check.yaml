@@ -12,3 +12,4 @@ jobs:
       - name: AFTER checkout-and-display-files
         run: |
           ls -a
+          npm -v
