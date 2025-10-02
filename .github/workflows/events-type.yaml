@@ -1,0 +1,17 @@
+name: events types
+on:
+  push:
+  pull_request:
+    types: [opened, closed, reopened, synchronize]
+  issues: 
+    types: [opened]
+jobs:
+   event-type-trigger-workflow:
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout-and-display-files
+         run: |
+           echo $GITHUB_SHA
+           echo $GITHUB_REF
+       - name: checkout-action
+         uses: actions/checkout@v3
