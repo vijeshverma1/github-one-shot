@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: checkout-and-display-files
         run: |
+          ls -a
           echo $GITHUB_SHA
           echo $GITHUB_REF
       - name: checkout-action
